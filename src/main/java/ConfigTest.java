@@ -18,8 +18,8 @@ public class ConfigTest {
         cfg.ConfigT();
         System.out.println(cfg.getProperty("Test"));
 
-        new InetSocketAddress().checkPort(11211);
-        MemCachedClient mcc = new MemCachedClient(new InetSocketAddress("127.0.0.1:11211"));
+        //new InetSocketAddress().checkPort(11211);
+        //MemCachedClient mcc = new MemCachedClient(new InetSocketAddress("127.0.0.1:11211"));
 
 
  //       MemCachedClient mcc = new MemCachedClient("Test1");

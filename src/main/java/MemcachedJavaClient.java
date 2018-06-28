@@ -56,6 +56,27 @@ public class MemcachedJavaClient {
         for(String key : hm.keySet()){
             System.out.println("KEY:"+key+" VALUE:"+hm.get(key));
         }
+
+        String[] servers1 = {"localhost:11211"};
+        SockIOPool pool1 = SockIOPool.getInstance("Test2");
+        pool1.setServers( servers1 );
+        //pool.setFailover( true );
+        //pool.setInitConn( 10 );
+        pool1.setMinConn( 5 );
+        pool1.setMaxConn( 250 );
+        pool1.setMaintSleep( 30 );
+        pool1.setNagle( false );
+        pool1.setSocketTO( 3000 );
+        pool1.setAliveCheck( true );
+        pool1.initialize();
+        //Get the Memcached Client from SockIOPool named Test1
+        MemCachedClient mcc1 = new MemCachedClient("Test2");
+        //add some value in cache
+        System.out.println("add status:"+mcc1.add("1", "Original"));
+        //Get value from cache
+        System.out.println("Get from Cache:"+mcc1.get("1"));
+
     }
+
 
 }
