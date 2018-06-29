@@ -19,12 +19,12 @@ public class MemcachedJavaClient {
         pool.setServers( servers );
         //pool.setFailover( true );
         //pool.setInitConn( 10 );
-        pool.setMinConn( 5 );
-        pool.setMaxConn( 250 );
-        pool.setMaintSleep( 30 );
-        pool.setNagle( false );
-        pool.setSocketTO( 3000 );
-        pool.setAliveCheck( true );
+        //pool.setMinConn( 5 );
+        //pool.setMaxConn( 250 );
+        //pool.setMaintSleep( 30 );
+        //pool.setNagle( false );
+        //pool.setSocketTO( 3000 );
+        //pool.setAliveCheck( true );
         pool.initialize();
         //Get the Memcached Client from SockIOPool named Test1
         MemCachedClient mcc = new MemCachedClient("Test1");

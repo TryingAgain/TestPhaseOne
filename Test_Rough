@@ -1,0 +1,36 @@
+BinanceEventDepthUpdate
+    (
+     eventTime=1530272223750,
+     symbol=ETHBTC,
+     updateId=259137195,
+     bids=
+        [],
+     asks=
+        [
+            BinanceBidOrAsk(type=ASK, price=0.07026800, quantity=0E-8),
+            BinanceBidOrAsk(type=ASK, price=0.07029800, quantity=0E-8),
+            BinanceBidOrAsk(type=ASK, price=0.07030100, quantity=0.60000000)
+        ]
+     )
+
+
+
+
+
+
+
+
+
+
+
+BinanceEventDepthUpdate(eventTime=1530272224750, symbol=ETHBTC, updateId=259137208, bids=[BinanceBidOrAsk(type=BID, price=0.06986900, quantity=0.05800000), BinanceBidOrAsk(type=BID, price=0.06985300, quantity=3.15000000), BinanceBidOrAsk(type=BID, price=0.06876500, quantity=0.14500000), BinanceBidOrAsk(type=BID, price=0.06860500, quantity=0E-8)], asks=[BinanceBidOrAsk(type=ASK, price=0.07023400, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07024300, quantity=0.28400000), BinanceBidOrAsk(type=ASK, price=0.07024500, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07024600, quantity=0.05600000), BinanceBidOrAsk(type=ASK, price=0.07026600, quantity=0.10000000), BinanceBidOrAsk(type=ASK, price=0.07026800, quantity=0.10000000), BinanceBidOrAsk(type=ASK, price=0.07197300, quantity=1.47300000)])
+BinanceEventDepthUpdate(eventTime=1530272225750, symbol=ETHBTC, updateId=259137215, bids=[BinanceBidOrAsk(type=BID, price=0.06941000, quantity=0.03500000), BinanceBidOrAsk(type=BID, price=0.06936900, quantity=0.17400000)], asks=[BinanceBidOrAsk(type=ASK, price=0.07024300, quantity=0.24600000), BinanceBidOrAsk(type=ASK, price=0.07026600, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07026800, quantity=0.20000000), BinanceBidOrAsk(type=ASK, price=0.07052500, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07054200, quantity=3.21000000)])
+BinanceEventDepthUpdate(eventTime=1530272226750, symbol=ETHBTC, updateId=259137218, bids=[BinanceBidOrAsk(type=BID, price=0.07020400, quantity=6.66700000), BinanceBidOrAsk(type=BID, price=0.06951200, quantity=0E-8)], asks=[BinanceBidOrAsk(type=ASK, price=0.07024900, quantity=5.00000000)])
+BinanceEventDepthUpdate(eventTime=1530272227750, symbol=ETHBTC, updateId=259137225, bids=[BinanceBidOrAsk(type=BID, price=0.07020500, quantity=1.95000000)], asks=[BinanceBidOrAsk(type=ASK, price=0.07024300, quantity=0.00100000), BinanceBidOrAsk(type=ASK, price=0.07026000, quantity=24.31000000), BinanceBidOrAsk(type=ASK, price=0.07026800, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07026900, quantity=0.20000000)])
+BinanceEventDepthUpdate(eventTime=1530272228750, symbol=ETHBTC, updateId=259137232, bids=[BinanceBidOrAsk(type=BID, price=0.07020900, quantity=10.00000000), BinanceBidOrAsk(type=BID, price=0.07020700, quantity=14.25200000), BinanceBidOrAsk(type=BID, price=0.07020600, quantity=0.66000000)], asks=[BinanceBidOrAsk(type=ASK, price=0.07030100, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07030200, quantity=0.60000000)])
+BinanceEventDepthUpdate(eventTime=1530272229750, symbol=ETHBTC, updateId=259137239, bids=[], asks=[BinanceBidOrAsk(type=ASK, price=0.07026900, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07027200, quantity=0.20000000), BinanceBidOrAsk(type=ASK, price=0.07037200, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07051600, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07064900, quantity=22.95600000)])
+BinanceEventDepthUpdate(eventTime=1530272230750, symbol=ETHBTC, updateId=259137249, bids=[BinanceBidOrAsk(type=BID, price=0.07020900, quantity=9.31500000), BinanceBidOrAsk(type=BID, price=0.07020600, quantity=0E-8), BinanceBidOrAsk(type=BID, price=0.06969500, quantity=0E-8), BinanceBidOrAsk(type=BID, price=0.06943600, quantity=1.39300000), BinanceBidOrAsk(type=BID, price=0.06922600, quantity=0E-8)], asks=[BinanceBidOrAsk(type=ASK, price=0.07024600, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07027100, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07030200, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07031600, quantity=13.77200000)])
+BinanceEventDepthUpdate(eventTime=1530272231750, symbol=ETHBTC, updateId=259137258, bids=[BinanceBidOrAsk(type=BID, price=0.07020900, quantity=9.22500000), BinanceBidOrAsk(type=BID, price=0.06935400, quantity=0E-8)], asks=[BinanceBidOrAsk(type=ASK, price=0.07024300, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07024700, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07024900, quantity=4.54400000), BinanceBidOrAsk(type=ASK, price=0.07026000, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07027500, quantity=24.31000000), BinanceBidOrAsk(type=ASK, price=0.07029700, quantity=3.24900000), BinanceBidOrAsk(type=ASK, price=0.07038500, quantity=0.19200000), BinanceBidOrAsk(type=ASK, price=0.07069400, quantity=0E-8)])
+BinanceEventDepthUpdate(eventTime=1530272232750, symbol=ETHBTC, updateId=259137269, bids=[BinanceBidOrAsk(type=BID, price=0.07020900, quantity=8.72000000), BinanceBidOrAsk(type=BID, price=0.06926000, quantity=0.14600000)], asks=[BinanceBidOrAsk(type=ASK, price=0.07024700, quantity=0.28400000), BinanceBidOrAsk(type=ASK, price=0.07024900, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07025100, quantity=2.94300000), BinanceBidOrAsk(type=ASK, price=0.07027200, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07027300, quantity=0.20000000), BinanceBidOrAsk(type=ASK, price=0.07030800, quantity=0E-8)])
+BinanceEventDepthUpdate(eventTime=1530272233750, symbol=ETHBTC, updateId=259137284, bids=[BinanceBidOrAsk(type=BID, price=0.07020900, quantity=8.63000000), BinanceBidOrAsk(type=BID, price=0.07020700, quantity=0E-8), BinanceBidOrAsk(type=BID, price=0.06999700, quantity=0.22800000), BinanceBidOrAsk(type=BID, price=0.06500000, quantity=263.32600000)], asks=[BinanceBidOrAsk(type=ASK, price=0.07024700, quantity=0.00100000), BinanceBidOrAsk(type=ASK, price=0.07025100, quantity=4.64000000), BinanceBidOrAsk(type=ASK, price=0.07027300, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07027400, quantity=0.20000000), BinanceBidOrAsk(type=ASK, price=0.07031300, quantity=13.86200000), BinanceBidOrAsk(type=ASK, price=0.07034000, quantity=0.60000000), BinanceBidOrAsk(type=ASK, price=0.07069400, quantity=0.72600000), BinanceBidOrAsk(type=ASK, price=0.07407700, quantity=0.08000000)])
+BinanceEventDepthUpdate(eventTime=1530272234750, symbol=ETHBTC, updateId=259137303, bids=[BinanceBidOrAsk(type=BID, price=0.07021100, quantity=7.12900000), BinanceBidOrAsk(type=BID, price=0.07021000, quantity=7.12300000), BinanceBidOrAsk(type=BID, price=0.07018600, quantity=0E-8), BinanceBidOrAsk(type=BID, price=0.07008600, quantity=19.93500000), BinanceBidOrAsk(type=BID, price=0.06985700, quantity=0.07200000), BinanceBidOrAsk(type=BID, price=0.06932100, quantity=0.07900000), BinanceBidOrAsk(type=BID, price=0.06919400, quantity=0E-8)], asks=[BinanceBidOrAsk(type=ASK, price=0.07025100, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07026700, quantity=11.69700000), BinanceBidOrAsk(type=ASK, price=0.07027400, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07027900, quantity=0.09000000), BinanceBidOrAsk(type=ASK, price=0.07028100, quantity=0.20000000), BinanceBidOrAsk(type=ASK, price=0.07032900, quantity=0E-8), BinanceBidOrAsk(type=ASK, price=0.07080700, quantity=2.95400000)])
