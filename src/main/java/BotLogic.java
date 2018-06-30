@@ -28,8 +28,13 @@ public class BotLogic {
             Session session = (new BinanceApi()).websocketDepth(symbol, new BinanceWebSocketAdapterDepth() {
                 @Override
                 public void onMessage(BinanceEventDepthUpdate message) {
-                    System.out.println(message.getClass().getName());
-                    System.out.println(message.toString());
+                    //System.out.println(message.getClass().getName());
+                    for (int i = 0; i < message.getBids().size(); i++) {
+                        System.out.println(message.getBids().get(i).getType());
+                    }
+                    for (int i = 0; i < message.getAsks().size(); i++) {
+                        System.out.println(message.getAsks().get(i));
+                    }
                 }
             });
             try {
