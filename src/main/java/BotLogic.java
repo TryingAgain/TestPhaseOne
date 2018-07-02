@@ -46,4 +46,30 @@ public class BotLogic {
             System.out.println("ERROR: " + e.getMessage());
             }
     }
+
+
+    public void secondMethod(){
+
+        System.out.println("Starting Main Thread...");
+        MyRunnableThread mrt = new MyRunnableThread();
+        Thread t = new Thread(mrt);
+        t.start();
+        while(MyRunnableThread.myCount <= 10){
+            try{
+                System.out.println("Main Thread: "+(++MyRunnableThread.myCount));
+                Thread.sleep(100);
+            } catch (InterruptedException iex){
+                System.out.println("Exception in main thread: "+iex.getMessage());
+            }
+        }
+    }
+
+    public void thirdMethod(){
+
+        BinanceTrades worker1 = new BinanceTrades();
+        worker1.start();
+
+        BinanceTrades worker2 = new BinanceTrades();
+        worker2.start();
+    }
 }
