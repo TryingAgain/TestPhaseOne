@@ -25,9 +25,13 @@ public class BotLogic {
             System.out.println( "ERROR: " + e.getMessage());
         }*/
 
+<<<<<<< HEAD
         Jedis jedis = new Jedis("localhost");
 
         try {
+=======
+        /*try {
+>>>>>>> fecb73dc9263416b39188e0e74ce6f74fc8017bd
 
             BinanceSymbol symbol = new BinanceSymbol("ETHBTC");
             Session session = (new BinanceApi()).websocketDepth(symbol, new BinanceWebSocketAdapterDepth() {
@@ -54,6 +58,7 @@ public class BotLogic {
             session.close();
             }catch (BinanceApiException e) {
             System.out.println("ERROR: " + e.getMessage());
+<<<<<<< HEAD
             }
 
 
@@ -74,5 +79,26 @@ public class BotLogic {
             }catch (BinanceApiException e) {
                 System.out.println("ERROR: " + e.getMessage());
             }
+=======
+            }*/
+        new BotLogic().secondMethod();
+        //new BotLogic().thirdMethod();
+    }
+
+
+    public void secondMethod(){
+
+        BinanceAskBids mrt = new BinanceAskBids();
+        Thread t = new Thread(mrt);
+        t.start();
+
+    }
+
+    public void thirdMethod(){
+
+        BinanceTrades worker1 = new BinanceTrades();
+        worker1.start();
+
+>>>>>>> fecb73dc9263416b39188e0e74ce6f74fc8017bd
     }
 }
