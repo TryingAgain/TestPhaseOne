@@ -22,7 +22,7 @@ public class BotLogic {
             System.out.println( "ERROR: " + e.getMessage());
         }*/
 
-        try {
+        /*try {
 
             BinanceSymbol symbol = new BinanceSymbol("ETHBTC");
             Session session = (new BinanceApi()).websocketDepth(symbol, new BinanceWebSocketAdapterDepth() {
@@ -44,24 +44,18 @@ public class BotLogic {
             session.close();
             }catch (BinanceApiException e) {
             System.out.println("ERROR: " + e.getMessage());
-            }
+            }*/
+        new BotLogic().secondMethod();
+        //new BotLogic().thirdMethod();
     }
 
 
     public void secondMethod(){
 
-        System.out.println("Starting Main Thread...");
-        MyRunnableThread mrt = new MyRunnableThread();
+        BinanceAskBids mrt = new BinanceAskBids();
         Thread t = new Thread(mrt);
         t.start();
-        while(MyRunnableThread.myCount <= 10){
-            try{
-                System.out.println("Main Thread: "+(++MyRunnableThread.myCount));
-                Thread.sleep(100);
-            } catch (InterruptedException iex){
-                System.out.println("Exception in main thread: "+iex.getMessage());
-            }
-        }
+
     }
 
     public void thirdMethod(){
@@ -69,7 +63,5 @@ public class BotLogic {
         BinanceTrades worker1 = new BinanceTrades();
         worker1.start();
 
-        BinanceTrades worker2 = new BinanceTrades();
-        worker2.start();
     }
 }
