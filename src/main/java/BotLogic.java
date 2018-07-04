@@ -8,6 +8,7 @@ import java.util.List;
  * Created by prabhu-92 on 29/6/18.
  */
 
+
 public class BotLogic {
 
     protected void firstMethod(){
@@ -38,6 +39,6 @@ public class BotLogic {
 
             System.out.println(val.get(i));
         }
-
+        
     }
 }
