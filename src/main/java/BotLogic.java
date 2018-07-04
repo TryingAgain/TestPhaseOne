@@ -37,7 +37,11 @@ public class BotLogic {
 
         for(int i = 0; i<val.size(); i++) {
 
-            System.out.println(val.get(i));
+            for(int j= 0; j<val.get(i).size();j++){
+
+                System.out.println(val.get(i).get(j));
+            }
+
         }
         
     }

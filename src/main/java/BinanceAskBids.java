@@ -28,12 +28,18 @@ public class BinanceAskBids implements Runnable {
 
                 MemCachedClient memCachedInstanceforTuples = MemcachedObject.getInstance();
 
-                ArrayList<List> tupleSetOfPrice_Quantity_bid = new ArrayList<List>();//(ArrayList)memCachedInstanceforTuples.get("ETHBTC_BID");
-                ArrayList<List> tupleSetOfPrice_Quantity_ask = new ArrayList<List>();//(ArrayList)memCachedInstanceforTuples.get("ETHBTC_ASK");
+                ArrayList<List> tupleSetOfPrice_Quantity_bid = new ArrayList<List>();
+                ArrayList<List> tupleSetOfPrice_Quantity_ask = new ArrayList<List>();
 
                 @Override
                 public void onMessage(BinanceEventDepthUpdate message) {
 
+                    if(memCachedInstanceforTuples.get("ETHBTC_ASK")!=null){
+                        tupleSetOfPrice_Quantity_ask = (ArrayList)memCachedInstanceforTuples.get("ETHBTC_ASK");
+                    }
+                    if(memCachedInstanceforTuples.get("ETHBTC_BID")!=null){
+                        tupleSetOfPrice_Quantity_bid = (ArrayList)memCachedInstanceforTuples.get("ETHBTC_BID");
+                    }
 
                     String Key_bid = message.getSymbol()+"_BID";
                     String Key_ask = message.getSymbol()+ "_ASK";
