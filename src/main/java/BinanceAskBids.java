@@ -2,46 +2,78 @@
  * Created by prabhu-92 on 2/7/18.
  */
 
+
+import com.webcerebrium.binance.api.BinanceApi;
+import com.webcerebrium.binance.api.BinanceApiException;
+import com.webcerebrium.binance.datatype.BinanceEventDepthUpdate;
+import com.webcerebrium.binance.datatype.BinanceSymbol;
+import com.webcerebrium.binance.websocket.BinanceWebSocketAdapterDepth;
 import com.whalin.MemCached.MemCachedClient;
+import org.eclipse.jetty.websocket.api.Session;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.ArrayList;
-
 
 public class BinanceAskBids implements Runnable {
 
     public void run() {
 
-//          synchronized (this){
 
-            MemCachedClient hello1 = MemcachedObject.getInstance();
+        final String coinpair = "ETHBTC";
 
-            List<Double> test = new ArrayList<Double>();
+        try {
+            BinanceSymbol symbol = new BinanceSymbol(coinpair);
+            Session session = (new BinanceApi()).websocketDepth(symbol, new BinanceWebSocketAdapterDepth() {
 
-            test.add(23.322);
-            test.add(3342.33);
+                MemCachedClient memCachedInstanceforTuples = MemcachedObject.getInstance();
 
-            hello1.set("key", test);
-            //System.out.println("redis" + "    " + hello1.get("key"));
+                ArrayList<List> tupleSetOfPrice_Quantity_bid = new ArrayList<List>();//(ArrayList)memCachedInstanceforTuples.get("ETHBTC_BID");
+                ArrayList<List> tupleSetOfPrice_Quantity_ask = new ArrayList<List>();//(ArrayList)memCachedInstanceforTuples.get("ETHBTC_ASK");
 
-            List val = Arrays.asList(hello1.get("key"));
+                @Override
+                public void onMessage(BinanceEventDepthUpdate message) {
 
-            for(int i = 0; i<val.size(); i++) {
-                System.out.println("Stored string in memcache:: "+val.get(i));
+
+                    String Key_bid = message.getSymbol()+"_BID";
+                    String Key_ask = message.getSymbol()+ "_ASK";
+                    //for bids entry
+                    for (int i = 0; i < message.getBids().size(); i++) {
+                        //;
+                        List<BigDecimal>price_quantity = new ArrayList<BigDecimal>();
+                        price_quantity.add(message.getBids().get(i).getPrice());
+                        price_quantity.add(message.getBids().get(i).getQuantity());
+                        this.tupleSetOfPrice_Quantity_bid.add(price_quantity);
+                    }
+
+                    for (int i = 0; i < message.getAsks().size(); i++) {
+                        //;
+                        List<BigDecimal>price_quantity = new ArrayList<BigDecimal>();
+                        price_quantity.add(message.getAsks().get(i).getPrice());
+                        price_quantity.add(message.getAsks().get(i).getQuantity());
+                        this.tupleSetOfPrice_Quantity_ask.add(price_quantity);
+                    }
+
+                    memCachedInstanceforTuples.set(Key_bid, tupleSetOfPrice_Quantity_bid);
+
+                    memCachedInstanceforTuples.set(Key_ask, tupleSetOfPrice_Quantity_ask);
+                }
+            });
+
+            /*try {
+                Thread.sleep(4000);
+            } catch (InterruptedException e) {
             }
+            session.close();*/
 
-            
+        }catch (BinanceApiException e) {
+            System.out.println("ERROR: " + e.getMessage());
+        }
 
-            //System.out.println(hello1);
-//        }
+
 
 
     }
-
-
-
 }
 
 
